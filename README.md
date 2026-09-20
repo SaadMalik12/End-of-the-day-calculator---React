@@ -1,78 +1,137 @@
-# React + TypeScript + Vite
+# 🕐 Office EOD Calculator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and practical productivity tool for calculating your **target departure time** based on your office check-in time, required working hours, and breaks.
 
-Currently, two official plugins are available:
+The Office EOD Calculator helps employees track their workday, account for lunch/prayer/tea breaks, and visualize their complete office schedule.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- 🏢 **Office Arrival Tracking** — Set your check-in time or use the current time.
+- ⏱️ **Flexible Work Duration** — Choose common work durations such as 7.5h, 8h, 8.5h, or 9h, or enter a custom duration.
+- ☕ **Break Management** — Add and manage lunch, prayer, tea, and custom breaks.
+- 🧮 **Automatic EOD Calculation** — Calculates your target departure time by adding your required work duration and breaks.
+- 📊 **Day Schedule Visualizer** — Get a visual overview of work and break intervals throughout the day.
+- 📈 **Progress Tracking** — See how much of your workday has been completed.
+- 📋 **Copy Summary** — Quickly copy your workday summary for sharing or personal tracking.
+- 🔄 **Reset Option** — Easily reset the calculator and start a new workday.
+- 📱 **Clean Responsive UI** — Designed for a simple and practical day-to-day office experience.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## 🛠️ Tech Stack
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+- **Angular**
+- **TypeScript**
+- **HTML5**
+- **CSS3**
+- **Angular Material** *(if enabled in the project)*
 
-## Expanding the ESLint configuration
+## 🚀 How It Works
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. Enter your **office check-in time**.
+2. Select your required **target work duration**.
+3. Add your **breaks and pauses**.
+4. The calculator automatically determines your **target departure time**.
+5. Use the **Day Schedule Visualizer** to understand your work/break distribution.
+6. Track your progress throughout the day.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Example
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+If you check in at **10:30 AM** and need to complete **8 hours of productive work**, with **1 hour of breaks**:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```text
+Office Entry       → 10:30 AM
+Target Work        → 8 hours
+Total Breaks       → 1 hour
+Total Office Time  → 9 hours
+Target Departure   → 7:30 PM
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+## 🎯 Use Cases
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+This project can be useful for:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Employees tracking their daily office hours
+- Developers and remote workers managing work schedules
+- People who need to account for multiple breaks
+- Anyone who wants a quick end-of-day calculator
+- Practicing Angular UI, state management, forms, and time calculations
 
+## 📸 Preview
+
+![Office EOD Calculator](./screenshot.png)
+
+## 💻 Getting Started
+
+### Prerequisites
+
+Make sure you have:
+
+- Node.js installed
+- npm installed
+- Angular CLI installed
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone <your-repository-url>
 ```
+
+Navigate to the project:
+
+```bash
+cd office-eod-calculator
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+ng serve
+```
+
+Open your browser and visit:
+
+```text
+http://localhost:4200
+```
+
+## 📁 Project Structure
+
+```text
+src/
+├── app/
+│   ├── components/
+│   ├── services/
+│   ├── models/
+│   └── ...
+├── assets/
+├── styles.css
+└── main.ts
+```
+
+> The exact structure may vary depending on the implementation.
+
+## 🔮 Future Improvements
+
+- Save daily work records using LocalStorage
+- Weekly/monthly work-hour reports
+- Overtime calculation
+- Multiple shift support
+- Dark mode
+- Export daily summary as PDF
+- PWA/offline support
+- Notification when the target departure time is approaching
+
+## 📄 License
+
+This project is created for learning, productivity, and portfolio purposes.
+
+---
+
+⭐ If you find this project useful, consider giving the repository a star!
