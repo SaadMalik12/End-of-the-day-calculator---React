@@ -4,6 +4,12 @@ A simple and practical productivity tool for calculating your **target departure
 
 The Office EOD Calculator helps employees track their workday, account for lunch, prayer, tea, and other breaks, and visualize their complete office schedule.
 
+## 🌐 Live Demo
+
+Try the **Office EOD Calculator** online:
+
+👉 https://endofthedaycalculator.vercel.app/
+
 ## ✨ Features
 
 - 🏢 **Office Arrival Tracking** — Set your check-in time or use the current time.
