@@ -108,6 +108,12 @@
   gap: 12px;
 }
 
+@media (max-width: 768px) {
+  .live-status-container {
+    margin-bottom: 16px;
+  }
+}
+
 .live-status-header {
   display: flex;
   justify-content: space-between;
